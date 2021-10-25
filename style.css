@@ -1,0 +1,192 @@
+*{
+    outline: none;
+}
+body{
+    overflow: overlay; /*write it to make scroll bar thransparent i only know this functionality but not.*/
+}
+html::-webkit-scrollbar{
+    background: transparent;
+    width: 0.3vw;
+}
+html::-webkit-scrollbar-thumb{
+    background-color:lightgray;
+    border-radius: 10px;
+}
+.banner-img {
+    background-image: url(banner.jpg);
+    background-size: cover;
+    background-position: right;
+}
+.navbar {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.content {
+    position: relative;
+    margin-left: 40px;
+}
+
+.btn1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 2;
+    transition: 0.5s;
+}
+
+.info {
+    text-transform: uppercase;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.info1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    position: absolute;
+    top: 30;
+    left: 10;
+    transition: 0.5s;
+}
+
+.spinner-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(90deg, #ff00cc 0%,#333399 100% );
+    animation: spin .5s infinite linear;
+}
+.spinner:after {
+    width: 90%;
+    height: 90%;
+    background-color: #151515;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+.hidden{
+    display: none !important; /*Important keyword is for make it to follow it forcefully.*/
+}
+header.sticky
+{
+    background: black;
+    padding: 32px 100px;
+    box-shadow: 0 5px 20px rgba(255,255,255,255);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.w-100{
+    height: 650px;
+    width: 100%;
+}
+.abt
+{
+    margin-left: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 7px;
+    width: 50rem;
+    transition: 0.5s;
+}
+.ab{
+    letter-spacing: 10px;
+    font-size: 30px;
+}
+.btn{
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 880px){
+.abt{
+    width:40rem;
+}
+}
+@media only screen and (max-width: 780px){
+    .w-100{
+        width: 100%;
+        height: 500px;
+    }
+    .abt{
+        width: 30rem;
+    }
+}
+@media only screen and (max-width: 580px){
+.abt{
+    width: 20rem;
+}
+}
+@media only screen and (max-width: 450px) {
+    .content{
+        margin:20px
+    }
+    .abt{
+        margin-left: 10px;
+        width: 20rem;
+    }
+    .info{
+        font-size: 20px;
+    }
+    .info1{
+        font-size: 15px;
+        top: 20;
+        left: 0;
+    }
+    .btn{
+        font-size: 10px;
+        top: 45;
+    }
+    .w-100{
+        width: 100%;
+        height: 350px;
+    }
+}
